@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>海南七星彩模拟盘</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>海南七星彩模拟盘</h1>
+        <p>虚拟积分演示系统</p>
+      </div>
+      <div class="user-chip" id="active-user">未登录</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>用户中心</h2>
+
+        <div class="stack">
+          <label>
+            用户名
+            <input id="username" placeholder="例如：demo" />
+          </label>
+          <div class="row-buttons">
+            <button id="loginBtn">登录</button>
+            <button id="registerBtn" class="ghost">注册</button>
+          </div>
+        </div>
+
+        <div class="account-box">
+          <div><small>当前积分</small><strong id="pointsBalance">0</strong></div>
+          <div><small>角色</small><strong id="roleLabel">-</strong></div>
+        </div>
+
+        <div class="panel-sub">
+          <h3>虚拟积分账变</h3>
+          <ul id="ledgerList" class="list"></ul>
+        </div>
+      </section>
+
+      <section class="panel wide">
+        <h2>投注区</h2>
+
+        <div class="issue-box">
+          <div>
+            <small>当前期号</small>
+            <strong id="currentIssue">-</strong>
+          </div>
+          <div>
+            <small>状态</small>
+            <strong id="issueStatus">-</strong>
+          </div>
+        </div>
+
+        <div class="selector-box">
+          <label>玩法</label>
+          <select id="playType">
+            <option value="直选">直选</option>
+            <option value="组选">组选</option>
+            <option value="复式">复式</option>
+          </select>
+        </div>
+
+        <div class="number-grid" id="numberGrid"></div>
+
+        <div class="bet-controls">
+          <label>
+            投注金额
+            <input id="stakeInput" type="number" min="10" value="100" />
+          </label>
+          <button id="betBtn">提交模拟投注</button>
+        </div>
+
+        <div class="panel-sub">
+          <h3>我的投注记录</h3>
+          <ul id="betList" class="list"></ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>管理员</h2>
+
+        <div class="stack">
+          <label>
+            期号
+            <input id="issueNoInput" placeholder="20261115-003" />
+          </label>
+          <label>
+            开始时间
+            <input id="startAtInput" type="datetime-local" />
+          </label>
+          <label>
+            截止时间
+            <input id="endAtInput" type="datetime-local" />
+          </label>
+          <button id="createIssueBtn">创建期号</button>
+        </div>
+
+        <div class="stack">
+          <label>
+            期号选择
+            <select id="issueSelect"></select>
+          </label>
+          <label>
+            开奖号码（7 个）
+            <input id="drawCodeInput" placeholder="1 2 3 4 5 6 7" />
+          </label>
+          <button id="setResultBtn" class="warning">录入开奖结果</button>
+        </div>
+
+        <div class="stack">
+          <label>
+            发放虚拟积分
+            <input id="grantAmountInput" type="number" value="500" />
+          </label>
+          <button id="grantBtn">确认发放</button>
+        </div>
+
+        <div class="panel-sub">
+          <h3>运营报表</h3>
+          <div id="reportBox" class="report-box"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
