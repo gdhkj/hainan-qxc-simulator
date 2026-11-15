@@ -1,59 +1,51 @@
 # 海南七星彩模拟盘
 
-这是一个纯模拟版的彩票演示项目，目标是展示用户在线提交模拟投注、管理员维护虚拟积分、录入开奖结果和查看报表的流程。
+这是一个纯前端版本，适合直接打开或部署到 GitHub Pages。
 
 特点：
-- 不涉及真实资金
-- 不涉及充值、提现、支付或兑换
-- 仅使用虚拟积分
-- 仅用于演示和学习
+- 无后端
+- 无数据库
+- 无真实交易
+- 仅在浏览器本地存储状态（localStorage）
+- 适合演示、学习和原型展示
 
-## 功能概览
+## 直接打开
 
-- 用户注册 / 登录
-- 查看当前期号和历史开奖
-- 提交模拟投注单
-- 管理员发放虚拟积分
-- 管理员维护期号
-- 管理员录入开奖结果并进行模拟结算
-- 查看账户、账变记录和后台报表
+在浏览器中直接打开项目根目录下的 `index.html` 即可。无需安装任何依赖，也无需服务器。
 
-## 技术栈
+## GitHub Pages
 
-- Node.js
-- Express
-- Vanilla JavaScript + HTML + CSS
+如果你想放到 GitHub Pages：
 
-## 运行方式
-
-1. 安装依赖
-
-```bash
-npm install
-```
-
-2. 启动服务
-
-```bash
-npm start
-```
-
-3. 打开浏览器访问
-
-```bash
-http://localhost:3000
-```
-
-## API 示例
-
-- `GET /api/health`
-- `GET /api/issues`
-- `POST /api/issues`
-- `POST /api/bets`
-- `GET /api/bets`
-- `POST /api/admin/result`
-- `GET /api/admin/reports`
+1. 打开 GitHub 仓库
+2. 进入 Settings → Pages
+3. Source 选 `Deploy from a branch`
+4. 选择 `main` 分支，保存
+5. GitHub 会生成一个站点地址
 
 ## 说明
 
-这是一个演示项目，不提供真实赌博、交易、支付、派奖或结算流程。所有积分均为虚拟积分，仅用于内部演示调用。
+- 数据保存在浏览器里的 `localStorage`
+- 关闭页面后数据通常还在
+- 浏览器清除缓存后会重置
+- 这是一个演示项目，不涉及真实赌资或真实结算
+
+## 目录架构
+
+- `index.html`
+- `styles.css`
+- `app.js`
+
+## 运行方式
+
+本地直接双击打开即可：
+
+```bash
+open index.html
+```
+
+Windows 直接双击 `index.html`，或者在浏览器地址栏中输入本地文件路径即可。
+
+## 注意
+
+这不是正式生产系统，也不是真实下注系统；它只是一个纯前端原型。
